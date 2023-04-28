@@ -3,7 +3,7 @@
     "type": "class",
     "name": "PrimeSpiral",
     "method": "run",
-    "url": "bundle.js",
+    "url": "main.js",
     "worker": false,
     "autorun": true
   },

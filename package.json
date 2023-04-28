@@ -2,14 +2,10 @@
   "name": "prime-spiral",
   "version": "0.0.1",
   "description": "",
-  "main": "bundle.js",
+  "main": "main.js",
   "scripts": {
-    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anton Zemlyansky",
-  "license": "MIT",
-  "dependencies": {
-    "@algorithm.ts/prime": "^3.0.0"
-  }
+  "license": "MIT"
 }

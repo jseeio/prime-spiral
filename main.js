@@ -1,4 +1,24 @@
-const { sievePrime } = require('@algorithm.ts/prime')
+function sievePrime(N) {
+  // From: @algorithm.ts/prime
+  if (N <= 1)
+    return []
+  let tot = 0
+  const primes = []
+  const isNotPrime = new Uint8Array(N)
+  for (let x = 2; x < N; ++x) {
+    if (!isNotPrime[x])
+      primes[tot++] = x
+    for (let i = 0; i < tot; ++i) {
+      if (primes[i] * x >= N)
+        break
+      isNotPrime[primes[i] * x] = 1;
+      if (x % primes[i] === 0)
+        break
+    }
+  }
+  primes.length = tot
+  return primes
+}
 
 class PrimeSpiral {
   constructor () {
@@ -37,6 +57,3 @@ class PrimeSpiral {
     })
   }
 }
-
-export default PrimeSpiral
-
